@@ -14,8 +14,8 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ featuredCategories, signatureDishes }) => {
   return (
     <Layout title="Home - The Golden Spoon">
-      <main className="items-start justify-center px-4 md:px-40 py-5 flex-1 grow flex relative self-stretch w-full">
-        <div className="flex flex-col max-w-[960px] items-start relative flex-1 grow mb-[-1.00px]">
+      <main className="flex items-start justify-center px-3 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8 lg:py-12 flex-1 grow relative self-stretch w-full bg-gradient-to-b from-white via-stone-50/30 to-white">
+        <div className="flex flex-col max-w-7xl items-center relative flex-1 grow space-y-8 sm:space-y-12 lg:space-y-16 xl:space-y-20 w-full">
           <HeroSection />
           <FeaturedCategories categories={featuredCategories} />
           <SignatureDishes dishes={signatureDishes} />

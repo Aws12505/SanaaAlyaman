@@ -20,15 +20,18 @@ export const Layout: React.FC<LayoutProps> = ({
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#ed7f11" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </Head>
       
-      <div className="flex flex-col items-start relative bg-white">
-        <div className="flex flex-col min-h-[800px] items-start relative self-stretch w-full flex-[0_0_auto] bg-white">
-          <div className="flex flex-col items-start relative self-stretch w-full flex-[0_0_auto]">
-            <Header />
+      <div className="flex flex-col items-start relative bg-white min-h-screen overflow-x-hidden">
+        <div className="flex flex-col min-h-screen items-start relative self-stretch w-full flex-[0_0_auto] bg-white">
+          <Header />
+          <main className="flex-1 w-full relative">
             {children}
-            <Footer />
-          </div>
+          </main>
+          <Footer />
         </div>
       </div>
     </>

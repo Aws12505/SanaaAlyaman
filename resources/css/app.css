@@ -7,6 +7,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Your existing theme and color configurations */
 @theme {
     --font-sans:
         'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
@@ -140,4 +141,80 @@
     body {
         @apply bg-background text-foreground;
     }
+}
+
+/* Enhanced animations and utilities */
+@layer utilities {
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+    
+    /* Prevent text selection during drag */
+    .select-none {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    /* Smooth momentum scrolling for mobile */
+    .scroll-smooth {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+    
+    /* Custom cursor states */
+    .cursor-grab {
+        cursor: grab;
+    }
+    
+    .cursor-grab:active,
+    .cursor-grabbing {
+        cursor: grabbing;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced focus styles */
+*:focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+}
+
+/* Prevent drag on images */
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+/* Touch action for better mobile scrolling */
+.carousel-container {
+    touch-action: pan-x;
 }

@@ -1,4 +1,5 @@
 <?php
+// app/Models/Testimonial.php
 
 namespace App\Models;
 
@@ -24,7 +25,12 @@ class Testimonial extends Model
     protected $casts = [
         'is_approved' => 'boolean',
         'is_featured' => 'boolean',
+        'rating' => 'integer',
+        'likes' => 'integer', 
+        'comments' => 'integer',
     ];
+
+    protected $appends = ['time_ago'];
 
     public function scopeApproved($query)
     {
