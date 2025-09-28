@@ -75,10 +75,10 @@ export default function UnderConstructionMinimal() {
                                     <div className="flex items-center gap-2">
                                         <Mail className="w-4 h-4 text-[#ed7f11]" />
                                         <a 
-                                            href="mailto:sanaaalyemen1978@gmail.com" 
+                                            href="mailto:info@sanaaalyemen.site" 
                                             className="text-[#ed7f11] hover:text-[#d16d0a] font-medium transition-colors"
                                         >
-                                            sanaaalyemen1978@gmail.com
+                                            info@sanaaalyemen.site
                                         </a>
                                     </div>
                                 </div>
