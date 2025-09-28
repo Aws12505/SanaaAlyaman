@@ -7,8 +7,6 @@ import React from "react";
 const footerLinks = [
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
-  { label: "Careers", href: "/careers" },
-  { label: "Press", href: "/press" },
 ];
 
 const socialIcons = [
