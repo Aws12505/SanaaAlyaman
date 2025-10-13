@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { useTwoFactorAuth } from '@/hooks/use-two-factor-auth';
 import AppLayout from '@/layouts/app-layout';
 import SettingsLayout from '@/layouts/settings/layout';
-import { disable, enable, show } from '@/routes/two-factor';
+// import { disable, enable, show } from '@/routes/two-factor';
 import { type BreadcrumbItem } from '@/types';
 import { Form, Head } from '@inertiajs/react';
 import { ShieldBan, ShieldCheck } from 'lucide-react';
@@ -18,10 +18,10 @@ interface TwoFactorProps {
 }
 
 const breadcrumbs: BreadcrumbItem[] = [
-    {
-        title: 'Two-Factor Authentication',
-        href: show.url(),
-    },
+    // {
+    //     title: 'Two-Factor Authentication',
+    //     href: show.url(),
+    // },
 ];
 
 export default function TwoFactor({
@@ -66,7 +66,7 @@ export default function TwoFactor({
                             />
 
                             <div className="relative inline">
-                                <Form {...disable.form()}>
+                                {/* <Form {...disable.form()}>
                                     {({ processing }) => (
                                         <Button
                                             variant="destructive"
@@ -76,7 +76,7 @@ export default function TwoFactor({
                                             <ShieldBan /> Disable 2FA
                                         </Button>
                                     )}
-                                </Form>
+                                </Form> */}
                             </div>
                         </div>
                     ) : (
@@ -90,7 +90,7 @@ export default function TwoFactor({
                             </p>
 
                             <div>
-                                {hasSetupData ? (
+                                {/* {hasSetupData ? (
                                     <Button
                                         onClick={() => setShowSetupModal(true)}
                                     >
@@ -98,23 +98,23 @@ export default function TwoFactor({
                                         Continue Setup
                                     </Button>
                                 ) : (
-                                    <Form
-                                        {...enable.form()}
-                                        onSuccess={() =>
-                                            setShowSetupModal(true)
-                                        }
-                                    >
-                                        {({ processing }) => (
-                                            <Button
-                                                type="submit"
-                                                disabled={processing}
-                                            >
-                                                <ShieldCheck />
-                                                Enable 2FA
-                                            </Button>
-                                        )}
-                                    </Form>
-                                )}
+                                    // <Form
+                                    //     {...enable.form()}
+                                    //     onSuccess={() =>
+                                    //         setShowSetupModal(true)
+                                    //     }
+                                    // >
+                                    //     {({ processing }) => (
+                                    //         <Button
+                                    //             type="submit"
+                                    //             disabled={processing}
+                                    //         >
+                                    //             <ShieldCheck />
+                                    //             Enable 2FA
+                                    //         </Button>
+                                    //     )}
+                                    // </Form>
+                                )} */}
                             </div>
                         </div>
                     )}
