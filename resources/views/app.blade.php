@@ -23,39 +23,34 @@
       html.dark { background-color: oklch(0.145 0 0); }
     </style>
 
-    {{-- Title: Inertia controls this; default here is a sensible fallback --}}
-    <title inertia>{{ config('app.name', 'Sanaa Alyemen') }}</title>
+    {{-- Title via Inertia; fallback provided --}}
+    <title inertia>{{ config('app.name', 'Sana\'a Alyemen Restaurant') }}</title>
 
-    {{-- Canonical (page-level Head can override) --}}
+    {{-- Canonical & indexing --}}
     <link rel="canonical" href="https://sanaaalyemen.site/">
-
-    {{-- Indexable by default --}}
     <meta name="robots" content="index, follow">
 
-    {{-- Default SEO (page can override) --}}
-    <meta name="description" content="Sanaa Alyemen — authentic Yemeni cuisine. Our new website is coming soon.">
-    <meta name="author" content="Sanaa Alyemen">
+    {{-- Default SEO (page-level Head can override) --}}
+    <meta name="description" content="Sana'a Alyemen Restaurant — authentic Yemeni cuisine. Our new website is coming soon.">
+    <meta name="author" content="Sana'a Alyemen Restaurant">
 
-    {{-- Open Graph defaults (page can override) --}}
+    {{-- Open Graph defaults --}}
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Sanaa Alyemen">
+    <meta property="og:site_name" content="Sana'a Alyemen Restaurant">
     <meta property="og:url" content="https://sanaaalyemen.site/">
-    <meta property="og:title" content="Sanaa Alyemen — Coming Soon">
+    <meta property="og:title" content="Sana'a Alyemen Restaurant — Coming Soon">
     <meta property="og:description" content="We’re cooking up something special. Contact us while we prepare our launch.">
     <meta property="og:image" content="https://sanaaalyemen.site/og-image.jpg">
 
-    {{-- Twitter defaults --}}
+    {{-- Minimal Twitter (safe to remove if you don't want it) --}}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sanaa Alyemen — Coming Soon">
-    <meta name="twitter:description" content="Authentic Yemeni cuisine. Opening soon — contact us for inquiries.">
-    <meta name="twitter:image" content="https://sanaaalyemen.site/og-image.jpg">
 
     {{-- Theme colors for light/dark --}}
     <meta name="theme-color" content="#ed7f11" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
     <meta name="color-scheme" content="light dark">
 
-    {{-- Icons / PWA (optional manifest) --}}
+    {{-- Icons / PWA --}}
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -68,25 +63,26 @@
     {{-- Performance: preload critical image (logo) --}}
     <link rel="preload" as="image" href="/logo.png" imagesizes="(max-width: 768px) 128px, 256px" imagesrcset="/logo.png 256w">
 
-    {{-- Business/Restaurant JSON-LD for rich results --}}
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "Sanaa Alyemen",
-      "url": "https://sanaaalyemen.site/",
-      "logo": "https://sanaaalyemen.site/logo.png",
-      "image": "https://sanaaalyemen.site/og-image.jpg",
-      "telephone": "+14378767773",
-      "email": "info@sanaaalyemen.site",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "CA"
-      },
-      "servesCuisine": ["Yemeni", "Middle Eastern"],
-      "sameAs": []
-    }
-    </script>
+    {{-- JSON-LD (built via PHP to avoid Blade @ parsing issues) --}}
+    @php
+      $schema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'Restaurant',
+        'name' => 'Sanaa Alyemen',
+        'url' => 'https://sanaaalyemen.site/',
+        'logo' => 'https://sanaaalyemen.site/logo.png',
+        'image' => 'https://sanaaalyemen.site/og-image.jpg',
+        'telephone' => '+14378767773',
+        'email' => 'info@sanaaalyemen.site',
+        'address' => [
+          '@type' => 'PostalAddress',
+          'addressCountry' => 'CA',
+        ],
+        'servesCuisine' => ['Yemeni', 'Middle Eastern'],
+        'sameAs' => [],
+      ];
+    @endphp
+    <script type="application/ld+json">{!! json_encode($schema, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) !!}</script>
 
     @viteReactRefresh
     @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
