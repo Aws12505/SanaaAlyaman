@@ -13,18 +13,26 @@ use App\Http\Controllers\Admin\TestimonialController as AdminTestimonialControll
 // require __DIR__.'/settings.php';
 // require __DIR__.'/auth.php';
 
-Route::get('/', function () {
-    return Inertia::render('UnderConstructionMinimal');
-})->name('under-construction');
 
-// Optional: Redirect all other routes to under construction
+// English landing (default)
+Route::get('/', function () {
+    return Inertia::render('UnderConstructionMinimal', [
+        'locale' => 'en',
+    ]);
+})->name('under-construction.en');
+
+// Arabic landing
+Route::get('/ar', function () {
+    return Inertia::render('UnderConstructionMinimalAr', [
+        'locale' => 'ar',
+    ]);
+})->name('under-construction.ar');
+
+// Optional: redirect all other non-admin routes to EN or AR version
 Route::fallback(function () {
-    return Inertia::render('UnderConstructionMinimal');
+    return redirect()->route('under-construction.en');
 });
 
-Route::get('{any}', function () {
-    return Inertia::render('UnderConstructionMinimal');
-})->where('any', '^(?!admin).*$');
 
 
 
