@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-  xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="https://www.w3.org/1999/xhtml"
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
   <!-- English Homepage -->
   <url>
     <loc>https://sanaaalyemen.site/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanaaalyemen.site/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sanaaalyemen.site/ar"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanaaalyemen.site/"/>
+
+    <!-- hreflang alternates -->
+    <xhtml:link 
+      rel="alternate" 
+      hreflang="en" 
+      href="https://sanaaalyemen.site/" 
+    />
+    <xhtml:link 
+      rel="alternate" 
+      hreflang="ar" 
+      href="https://sanaaalyemen.site/ar" 
+    />
+    <xhtml:link 
+      rel="alternate" 
+      hreflang="x-default" 
+      href="https://sanaaalyemen.site/" 
+    />
+
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -16,9 +31,24 @@
   <!-- Arabic Homepage -->
   <url>
     <loc>https://sanaaalyemen.site/ar</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanaaalyemen.site/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sanaaalyemen.site/ar"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanaaalyemen.site/"/>
+
+    <!-- hreflang alternates -->
+    <xhtml:link 
+      rel="alternate" 
+      hreflang="en" 
+      href="https://sanaaalyemen.site/" 
+    />
+    <xhtml:link 
+      rel="alternate" 
+      hreflang="ar" 
+      href="https://sanaaalyemen.site/ar" 
+    />
+    <xhtml:link 
+      rel="alternate" 
+      hreflang="x-default" 
+      href="https://sanaaalyemen.site/" 
+    />
+
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
