@@ -36,7 +36,7 @@
       $enUrl = 'https://sanaaalyemen.site/';
 
       // AR SEO
-      $arTitle = 'مطعم صنعاء اليمن في تورونتو — قريباً';
+      $arTitle = 'مطعم صنعاء اليمن — قريباً';
       $arDescription = 'مطعم صنعاء اليمن في كندا — المذاق الأصيل للمطبخ اليمني. الموقع قيد الإنشاء حالياً. تواصل معنا على ‎+1 (437) 876-7773 أو info@sanaaalyemen.site.';
       $arUrl = 'https://sanaaalyemen.site/ar';
 
