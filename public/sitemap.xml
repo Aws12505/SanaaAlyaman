@@ -8,20 +8,20 @@
     <loc>https://sanaaalyemen.site/</loc>
 
     <!-- hreflang alternates -->
-    <xhtml:link 
-      rel="alternate" 
-      hreflang="en" 
-      href="https://sanaaalyemen.site/" 
+    <xhtml:link
+      rel="alternate"
+      hreflang="en-CA"
+      href="https://sanaaalyemen.site/"
     />
-    <xhtml:link 
-      rel="alternate" 
-      hreflang="ar" 
-      href="https://sanaaalyemen.site/ar" 
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://sanaaalyemen.site/ar"
     />
-    <xhtml:link 
-      rel="alternate" 
-      hreflang="x-default" 
-      href="https://sanaaalyemen.site/" 
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://sanaaalyemen.site/"
     />
 
     <priority>1.0</priority>
@@ -33,20 +33,20 @@
     <loc>https://sanaaalyemen.site/ar</loc>
 
     <!-- hreflang alternates -->
-    <xhtml:link 
-      rel="alternate" 
-      hreflang="en" 
-      href="https://sanaaalyemen.site/" 
+    <xhtml:link
+      rel="alternate"
+      hreflang="en-CA"
+      href="https://sanaaalyemen.site/"
     />
-    <xhtml:link 
-      rel="alternate" 
-      hreflang="ar" 
-      href="https://sanaaalyemen.site/ar" 
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="https://sanaaalyemen.site/ar"
     />
-    <xhtml:link 
-      rel="alternate" 
-      hreflang="x-default" 
-      href="https://sanaaalyemen.site/" 
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://sanaaalyemen.site/"
     />
 
     <priority>1.0</priority>

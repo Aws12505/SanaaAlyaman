@@ -2,6 +2,7 @@
 <html
   lang="{{ str_replace('_', '-', app()->getLocale()) }}"
   @class(['dark' => ($appearance ?? 'system') == 'dark'])
+  @if(app()->getLocale() === 'ar') dir="rtl" @endif
 >
   <head>
     <meta charset="utf-8">
@@ -26,36 +27,24 @@
       html.dark { background-color: oklch(0.145 0 0); }
     </style>
 
-    {{-- Title via Inertia; fallback provided --}}
-    <title inertia>{{ config('app.name', 'Sana\'a Alyemen Restaurant') }}</title>
+    {{-- Title controlled by Inertia pages --}}
+    <title inertia>{{ config('app.name', "Sanaa Alyemen Restaurant") }}</title>
 
-    {{-- NOTE: canonical & robots now handled per-page in Inertia <Head> --}}
-    {{-- So we do NOT put a fixed canonical or robots meta here. --}}
-
-    {{-- Default SEO description (can be overridden in pages) --}}
-    <meta name="description" content="Sana'a Alyemen Restaurant — authentic Yemeni cuisine. Our new website is coming soon.">
-    <meta name="author" content="Sana'a Alyemen Restaurant">
-
-    {{-- Open Graph defaults (can be overridden by page-level meta) --}}
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Sana'a Alyemen Restaurant">
-    <meta property="og:title" content="Sana'a Alyemen Restaurant — Coming Soon">
-    <meta property="og:description" content="We’re cooking up something special. Contact us while we prepare our launch.">
-    <meta property="og:image" content="https://sanaaalyemen.site/og-image.jpg">
-
-    {{-- Minimal Twitter (safe to remove if you don't want it) --}}
-    <meta name="twitter:card" content="summary_large_image">
+    {{-- IMPORTANT:
+         Do NOT put canonical, robots, description, OG, or Twitter meta here.
+         Those are defined PER PAGE via Inertia <Head> in your React components.
+    --}}
 
     {{-- Theme colors for light/dark --}}
     <meta name="theme-color" content="#ed7f11" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
     <meta name="color-scheme" content="light dark">
 
-    {{-- Icons / PWA --}}
-    <link rel="icon" href="/favicon-48x48.png" sizes="48x48">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    {{-- Icons / PWA (with cache-busting query params for browsers) --}}
+    <link rel="icon" href="/favicon-48x48.png?v=2" sizes="48x48">
+    <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico?v=2" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
     <link rel="manifest" href="/site.webmanifest">
 
     {{-- Performance: preconnect & font CSS --}}
@@ -71,7 +60,7 @@
       imagesrcset="/logo.png 256w"
     >
 
-    {{-- JSON-LD (built via PHP to avoid Blade @ parsing issues) --}}
+    {{-- JSON-LD (global restaurant schema) --}}
     @php
       $schema = [
         '@context' => 'https://schema.org',
@@ -81,7 +70,7 @@
           'Sanaa Alyemen',
           'مطعم صنعاء اليمن',
         ],
-        'alternateName' => 'Sana\'a Alyemen Restaurant',
+        'alternateName' => "Sana'a Alyemen Restaurant",
         'url' => 'https://sanaaalyemen.site/',
         'logo' => 'https://sanaaalyemen.site/logo.png',
         'image' => 'https://sanaaalyemen.site/og-image.jpg',

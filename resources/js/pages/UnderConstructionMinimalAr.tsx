@@ -16,7 +16,7 @@ export default function UnderConstructionMinimalAr() {
 
         <meta
           name="description"
-          content="مطعم صنعاء اليمن في تورونتو — المذاق الأصيل للمطبخ اليمني. الموقع قيد الإنشاء حالياً. تواصل معنا على ‎+1 (437) 876-7773 أو info@sanaaalyemen.site."
+          content="مطعم صنعاء اليمن في كندا — المذاق الأصيل للمطبخ اليمني. الموقع قيد الإنشاء حالياً. تواصل معنا على ‎+1 (437) 876-7773 أو info@sanaaalyemen.site."
         />
 
         {/* Open Graph */}
@@ -26,7 +26,7 @@ export default function UnderConstructionMinimalAr() {
         <meta property="og:title" content="مطعم صنعاء اليمن — قريباً" />
         <meta
           property="og:description"
-          content="نحضر لكم تجربة يمنية مميزة. تواصلوا معنا خلال تجهيز افتتاح المطعم."
+          content="مطعم صنعاء اليمن يقدم المأكولات اليمنية الأصيلة في كندا. نحضر لكم تجربة يمنية مميزة. تواصلوا معنا خلال تجهيز افتتاح المطعم."
         />
         <meta property="og:image" content="https://sanaaalyemen.site/og-image.jpg" />
         <meta property="og:locale" content="ar" />
@@ -37,7 +37,7 @@ export default function UnderConstructionMinimalAr() {
         <meta name="twitter:title" content="مطعم صنعاء اليمن — قريباً" />
         <meta
           name="twitter:description"
-          content="مطعم يمني أصيل في تورونتو. قريباً الافتتاح — تواصل معنا للاستفسار."
+          content="مطعم يمني أصيل في كندا. قريباً الافتتاح — تواصل معنا للاستفسار."
         />
         <meta name="twitter:image" content="https://sanaaalyemen.site/og-image.jpg" />
 
@@ -80,14 +80,14 @@ export default function UnderConstructionMinimalAr() {
             {/* Main message */}
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-800 leading-tight">
-                نحضّر لكم
+                مطعم صنعاء اليمن
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#ed7f11] to-[#d16d0a] mt-1">
-                  تجربة يمنية لذيذة
+                  تجربة يمنية لذيذة قريباً
                 </span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed max-w-lg mx-auto">
-                يتم تجهيز المطعم بكل حب وعناية لتقديم أشهى الأطباق اليمنية الأصيلة.
-                نلتقي بكم قريباً إن شاء الله.
+                يتم تجهيز مطعم صنعاء اليمن في كندا بكل حب وعناية لتقديم
+                أشهى الأطباق اليمنية الأصيلة. نلتقي بكم قريباً إن شاء الله.
               </p>
             </div>
 

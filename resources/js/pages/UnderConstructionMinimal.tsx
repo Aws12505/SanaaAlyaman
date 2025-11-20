@@ -10,24 +10,24 @@ export default function UnderConstructionMinimal() {
     <>
       <Head>
         {/* Indexable + canonical (English) */}
-        <title>Under Construction — Sanaa Alyemen</title>
+        <title>Sanaa Alyemen Restaurant — Coming Soon</title>
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://sanaaalyemen.site/" />
 
         {/* SEO description */}
         <meta
           name="description"
-          content="Sanaa Alyemen — authentic Yemeni cuisine in Toronto. Our new site is coming soon. Reach us at +1 (437) 876-7773 or info@sanaaalyemen.site."
+          content="Sanaa Alyemen Restaurant — authentic Yemeni cuisine in Toronto, Canada. Our new site is coming soon. Reach us at +1 (437) 876-7773 or info@sanaaalyemen.site."
         />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Sanaa Alyemen" />
         <meta property="og:url" content="https://sanaaalyemen.site/" />
-        <meta property="og:title" content="Sanaa Alyemen — Coming Soon" />
+        <meta property="og:title" content="Sanaa Alyemen Restaurant — Coming Soon" />
         <meta
           property="og:description"
-          content="We’re cooking up something special. Contact us while we prepare our launch."
+          content="Authentic Yemeni restaurant in Toronto, Canada. We’re cooking up something special. Contact us while we prepare our launch."
         />
         <meta property="og:image" content="https://sanaaalyemen.site/og-image.jpg" />
         <meta property="og:locale" content="en_CA" />
@@ -35,10 +35,10 @@ export default function UnderConstructionMinimal() {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sanaa Alyemen — Coming Soon" />
+        <meta name="twitter:title" content="Sanaa Alyemen Restaurant — Coming Soon" />
         <meta
           name="twitter:description"
-          content="Authentic Yemeni cuisine. Opening soon — contact us for inquiries."
+          content="Authentic Yemeni cuisine in Toronto, Canada. Opening soon — contact us for inquiries."
         />
         <meta name="twitter:image" content="https://sanaaalyemen.site/og-image.jpg" />
 
@@ -83,6 +83,7 @@ export default function UnderConstructionMinimal() {
                 </span>
               </h1>
               <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-lg mx-auto">
+                Sanaa Alyemen is an authentic Yemeni restaurant in Toronto, Canada.
                 Our restaurant is being prepared with love and attention to detail.
                 We’ll be serving you soon!
               </p>

@@ -4,5 +4,5 @@ Allow: /
 # No crawling of backend/admin
 Disallow: /admin/
 
-# Sitemap locations
+# Sitemap location
 Sitemap: https://sanaaalyemen.site/sitemap.xml
