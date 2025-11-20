@@ -9,46 +9,7 @@ export default function UnderConstructionMinimalAr() {
   return (
     <>
       <Head>
-        {/* Arabic SEO + canonical */}
         <title>مطعم صنعاء اليمن — قريباً</title>
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://sanaaalyemen.site/ar" />
-
-        <meta
-          name="description"
-          content="مطعم صنعاء اليمن في كندا — المذاق الأصيل للمطبخ اليمني. الموقع قيد الإنشاء حالياً. تواصل معنا على ‎+1 (437) 876-7773 أو info@sanaaalyemen.site."
-        />
-
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="مطعم صنعاء اليمن" />
-        <meta property="og:url" content="https://sanaaalyemen.site/ar" />
-        <meta property="og:title" content="مطعم صنعاء اليمن — قريباً" />
-        <meta
-          property="og:description"
-          content="مطعم صنعاء اليمن يقدم المأكولات اليمنية الأصيلة في كندا. نحضر لكم تجربة يمنية مميزة. تواصلوا معنا خلال تجهيز افتتاح المطعم."
-        />
-        <meta property="og:image" content="https://sanaaalyemen.site/og-image.jpg" />
-        <meta property="og:locale" content="ar" />
-        <meta property="og:locale:alternate" content="en_CA" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="مطعم صنعاء اليمن — قريباً" />
-        <meta
-          name="twitter:description"
-          content="مطعم يمني أصيل في كندا. قريباً الافتتاح — تواصل معنا للاستفسار."
-        />
-        <meta name="twitter:image" content="https://sanaaalyemen.site/og-image.jpg" />
-
-        {/* Language alternates */}
-        <link rel="alternate" href="https://sanaaalyemen.site/" hrefLang="en" />
-        <link rel="alternate" href="https://sanaaalyemen.site/ar" hrefLang="ar" />
-        <link rel="alternate" href="https://sanaaalyemen.site/" hrefLang="x-default" />
-
-        {/* Contact links */}
-        <link rel="me" href="mailto:info@sanaaalyemen.site" />
-        <link rel="me" href="tel:+14378767773" />
       </Head>
 
       {/* RTL layout for Arabic */}

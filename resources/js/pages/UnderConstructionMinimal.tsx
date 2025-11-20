@@ -9,47 +9,8 @@ export default function UnderConstructionMinimal() {
   return (
     <>
       <Head>
-        {/* Indexable + canonical (English) */}
+        {/* Optional: this title will update after hydration, but fallback comes from Blade */}
         <title>Sanaa Alyemen Restaurant — Coming Soon</title>
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://sanaaalyemen.site/" />
-
-        {/* SEO description */}
-        <meta
-          name="description"
-          content="Sanaa Alyemen Restaurant — authentic Yemeni cuisine in Toronto, Canada. Our new site is coming soon. Reach us at +1 (437) 876-7773 or info@sanaaalyemen.site."
-        />
-
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Sanaa Alyemen" />
-        <meta property="og:url" content="https://sanaaalyemen.site/" />
-        <meta property="og:title" content="Sanaa Alyemen Restaurant — Coming Soon" />
-        <meta
-          property="og:description"
-          content="Authentic Yemeni restaurant in Toronto, Canada. We’re cooking up something special. Contact us while we prepare our launch."
-        />
-        <meta property="og:image" content="https://sanaaalyemen.site/og-image.jpg" />
-        <meta property="og:locale" content="en_CA" />
-        <meta property="og:locale:alternate" content="ar" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sanaa Alyemen Restaurant — Coming Soon" />
-        <meta
-          name="twitter:description"
-          content="Authentic Yemeni cuisine in Toronto, Canada. Opening soon — contact us for inquiries."
-        />
-        <meta name="twitter:image" content="https://sanaaalyemen.site/og-image.jpg" />
-
-        {/* Language alternates */}
-        <link rel="alternate" href="https://sanaaalyemen.site/" hrefLang="en" />
-        <link rel="alternate" href="https://sanaaalyemen.site/ar" hrefLang="ar" />
-        <link rel="alternate" href="https://sanaaalyemen.site/" hrefLang="x-default" />
-
-        {/* Optional: business contact links for better UX in SERP */}
-        <link rel="me" href="mailto:info@sanaaalyemen.site" />
-        <link rel="me" href="tel:+14378767773" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 flex items-center justify-center p-4">
