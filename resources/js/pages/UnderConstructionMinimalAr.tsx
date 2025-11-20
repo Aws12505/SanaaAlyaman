@@ -1,6 +1,6 @@
 // resources/js/pages/UnderConstructionMinimalAr.tsx
 
-import { Head } from '@inertiajs/react';
+import { Head, Link } from '@inertiajs/react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Construction, Clock, Sparkles, Phone, Mail } from 'lucide-react';
@@ -14,9 +14,24 @@ export default function UnderConstructionMinimalAr() {
 
       {/* RTL layout for Arabic */}
       <div
-        className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 flex items-center justify-center p-4"
+        className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 flex items-center justify-center p-4 relative"
         dir="rtl"
       >
+        {/* Language switcher (RTL order) */}
+        <div className="absolute top-4 left-4 flex items-center gap-2 text-sm font-medium">
+          <span className="px-3 py-1 rounded-full bg-slate-900/5 text-slate-900 border border-slate-200">
+            العربية
+          </span>
+          <span className="text-slate-400">/</span>
+          <Link
+            href="/"
+            hrefLang="en-CA"
+            className="px-3 py-1 rounded-full text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-transparent hover:border-slate-200 transition-colors"
+          >
+            English
+          </Link>
+        </div>
+
         <Card className="w-full max-w-2xl mx-auto shadow-2xl border-0 bg-white/90 backdrop-blur-sm">
           <CardContent className="p-12 text-center space-y-8">
             {/* Logo */}
