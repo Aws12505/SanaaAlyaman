@@ -7,6 +7,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="geo.region" content="CA-ON" />
+    <meta name="geo.placename" content="Mississauga" />
+    <meta name="geo.position" content="43.5890;-79.6441" />
+    <meta name="ICBM" content="43.5890, -79.6441" />
 
     {{-- Dark mode setup --}}
     <script>
@@ -31,13 +35,13 @@
       $isArabic = app()->getLocale() === 'ar';
 
       // EN SEO
-      $enTitle = 'Sanaa Alyemen Restaurant — Coming Soon';
-      $enDescription = 'Sanaa Alyemen Restaurant — authentic Yemeni cuisine in Canada. Our new site is coming soon. Reach us at +1 (437) 876-7773 or info@sanaaalyemen.site.';
+      $enTitle = 'Sanaa Alyemen Restaurant | Authentic Yemeni Food in Mississauga, Canada';
+      $enDescription = 'Experience authentic Yemeni cuisine at Sanaa Alyemen Restaurant in Mississauga. Traditional dishes prepared with finest local ingredients and aromatic spices. Located at 2121 Dundas St E, Mississauga ON L4X 1M3. Call 905-624-7220 for delivery & reservations.';
       $enUrl = 'https://sanaaalyemen.site/';
 
       // AR SEO
-      $arTitle = 'مطعم صنعاء اليمن — قريباً';
-      $arDescription = 'مطعم صنعاء اليمن في كندا — المذاق الأصيل للمطبخ اليمني. الموقع قيد الإنشاء حالياً. تواصل معنا على ‎+1 (437) 876-7773 أو info@sanaaalyemen.site.';
+      $arTitle = 'مطعم صنعاء اليمن | مطبخ يمني أصيل في ميسيساجا، كندا';
+      $arDescription = 'استمتع بالمطبخ اليمني الأصيل في مطعم صنعاء اليمن في ميسيساجا. أطباق تقليدية مُعدة بأجود المكونات المحلية والتوابل العطرية. موقعنا: 2121 Dundas St E، ميسيساجا ON L4X 1M3. اتصل على 905-624-7220 للتوصيل والحجوزات.';
       $arUrl = 'https://sanaaalyemen.site/ar';
 
       $currentTitle = $isArabic ? $arTitle : $enTitle;
@@ -49,10 +53,17 @@
     <title inertia>{{ $currentTitle }}</title>
 
     {{-- Robots --}}
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
     {{-- Primary meta description (server-rendered for SEO) --}}
     <meta name="description" content="{{ $currentDescription }}">
+
+    {{-- Keywords --}}
+    @if($isArabic)
+    <meta name="keywords" content="مطعم يمني ميسيساجا, مطبخ يمني أصيل كندا, مطعم شرق أوسطي ميسيساجا, مأكولات يمنية تورنتو, مطعم حلال ميسيساجا, أطباق يمنية تقليدية, صنعاء اليمن, أفضل مطعم يمني أونتاريو, مطعم يمني في كندا, طعام يمني حلال">
+    @else
+    <meta name="keywords" content="Yemeni restaurant Mississauga, authentic Yemeni food Canada, Middle Eastern restaurant Mississauga, Yemeni cuisine Toronto, halal restaurant Mississauga, traditional Yemeni dishes, Sana'a Al Yemen, best Yemeni restaurant Ontario, Yemeni food Canada, halal dining Mississauga">
+    @endif
 
     {{-- Canonical URL --}}
     <link rel="canonical" href="{{ $currentUrl }}">
@@ -63,14 +74,21 @@
     <link rel="alternate" href="https://sanaaalyemen.site/" hreflang="x-default">
 
     {{-- Open Graph --}}
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{ $isArabic ? 'مطعم صنعاء اليمن' : 'Sanaa Alyemen' }}">
+    <meta property="og:type" content="restaurant">
+    <meta property="og:site_name" content="{{ $isArabic ? 'مطعم صنعاء اليمن' : 'Sanaa Alyemen Restaurant' }}">
     <meta property="og:url" content="{{ $currentUrl }}">
     <meta property="og:title" content="{{ $currentTitle }}">
     <meta property="og:description" content="{{ $currentDescription }}">
     <meta property="og:image" content="https://sanaaalyemen.site/og-image.jpg">
-    <meta property="og:locale" content="{{ $isArabic ? 'ar' : 'en_CA' }}">
-    <meta property="og:locale:alternate" content="{{ $isArabic ? 'en_CA' : 'ar' }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="{{ $isArabic ? 'ar_AR' : 'en_CA' }}">
+    <meta property="og:locale:alternate" content="{{ $isArabic ? 'en_CA' : 'ar_AR' }}">
+    <meta property="restaurant:contact_info:street_address" content="2121 Dundas St E">
+    <meta property="restaurant:contact_info:locality" content="Mississauga">
+    <meta property="restaurant:contact_info:region" content="ON">
+    <meta property="restaurant:contact_info:postal_code" content="L4X 1M3">
+    <meta property="restaurant:contact_info:country_name" content="Canada">
 
     {{-- Twitter --}}
     <meta name="twitter:card" content="summary_large_image">
@@ -103,33 +121,123 @@
       imagesrcset="/logo.png 256w"
     >
 
-    {{-- Global JSON-LD restaurant schema --}}
+    {{-- Enhanced JSON-LD restaurant schema --}}
     @php
       $schema = [
         '@context' => 'https://schema.org',
         '@type' => 'Restaurant',
-        'name' => [
-          'Sanaa Alyemen',
-          'مطعم صنعاء اليمن',
+        '@id' => 'https://sanaaalyemen.site/#restaurant',
+        'name' => $isArabic ? 'مطعم صنعاء اليمن' : 'Sanaa Alyemen Restaurant',
+        'alternateName' => [
+          "Sana'a Alyemen Restaurant",
+          'Sanaa Al Yemen',
+          'مطعم صنعاء اليمن'
         ],
-        'alternateName' => "Sana'a Alyemen Restaurant",
+        'description' => $currentDescription,
         'url' => 'https://sanaaalyemen.site/',
         'logo' => 'https://sanaaalyemen.site/logo.png',
-        'image' => 'https://sanaaalyemen.site/og-image.jpg',
-        'telephone' => '+14378767773',
+        'image' => [
+          'https://sanaaalyemen.site/og-image.jpg',
+          'https://sanaaalyemen.site/logo.png'
+        ],
+        'telephone' => '+1-905-624-7220',
         'email' => 'info@sanaaalyemen.site',
+        'priceRange' => '$$',
         'address' => [
           '@type' => 'PostalAddress',
+          'streetAddress' => '2121 Dundas St E',
+          'addressLocality' => 'Mississauga',
+          'addressRegion' => 'ON',
+          'postalCode' => 'L4X 1M3',
           'addressCountry' => 'CA',
         ],
-        'servesCuisine' => ['Yemeni', 'Middle Eastern', 'يمني', 'شرق أوسطي'],
-        'sameAs' => [
-          // Add social URLs when ready: Facebook, Instagram, Google Maps
+        'geo' => [
+          '@type' => 'GeoCoordinates',
+          'latitude' => '43.5890',
+          'longitude' => '-79.6441',
         ],
+        'servesCuisine' => [
+          'Yemeni',
+          'Middle Eastern',
+          'يمني',
+          'شرق أوسطي',
+          'Arabic',
+          'Halal'
+        ],
+        'menu' => 'https://sanaaalyemen.site/#menu',
+        'acceptsReservations' => 'True',
+        'openingHoursSpecification' => [
+          '@type' => 'OpeningHoursSpecification',
+          'dayOfWeek' => [
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+            'Sunday'
+          ],
+        ],
+        'sameAs' => [
+          // Add social URLs when ready
+        ],
+        'hasMenu' => [
+          '@type' => 'Menu',
+          '@id' => 'https://sanaaalyemen.site/#menu',
+          'name' => $isArabic ? 'قائمة الطعام' : 'Menu',
+        ],
+        'potentialAction' => [
+          [
+            '@type' => 'ReserveAction',
+            'target' => [
+              '@type' => 'EntryPoint',
+              'urlTemplate' => 'tel:+19056247220',
+              'actionPlatform' => [
+                'http://schema.org/DesktopWebPlatform',
+                'http://schema.org/MobileWebPlatform'
+              ]
+            ],
+            'result' => [
+              '@type' => 'Reservation',
+              'name' => $isArabic ? 'حجز طاولة' : 'Table Reservation'
+            ]
+          ],
+          [
+            '@type' => 'OrderAction',
+            'target' => [
+              '@type' => 'EntryPoint',
+              'urlTemplate' => 'tel:+19056247220',
+              'actionPlatform' => [
+                'http://schema.org/DesktopWebPlatform',
+                'http://schema.org/MobileWebPlatform'
+              ]
+            ],
+            'deliveryMethod' => 'http://purl.org/goodrelations/v1#DeliveryModeOwnFleet'
+          ]
+        ]
       ];
     @endphp
     <script type="application/ld+json">
-      {!! json_encode($schema, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) !!}
+      {!! json_encode($schema, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT) !!}
+    </script>
+
+    {{-- BreadcrumbList Schema --}}
+    @php
+      $breadcrumbSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+          [
+            '@type' => 'ListItem',
+            'position' => 1,
+            'name' => $isArabic ? 'الصفحة الرئيسية' : 'Home',
+            'item' => $currentUrl
+          ]
+        ]
+      ];
+    @endphp
+    <script type="application/ld+json">
+      {!! json_encode($breadcrumbSchema, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) !!}
     </script>
 
     @viteReactRefresh

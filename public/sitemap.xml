@@ -2,11 +2,13 @@
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 >
   <!-- English Homepage -->
   <url>
     <loc>https://sanaaalyemen.site/</loc>
-
+    <lastmod>2025-11-21</lastmod>
+    
     <!-- hreflang alternates -->
     <xhtml:link
       rel="alternate"
@@ -24,14 +26,22 @@
       href="https://sanaaalyemen.site/"
     />
 
+    <!-- Image for SEO -->
+    <image:image>
+      <image:loc>https://sanaaalyemen.site/logo.png</image:loc>
+      <image:title>Sanaa Alyemen Restaurant Logo</image:title>
+      <image:caption>Authentic Yemeni Restaurant in Mississauga, Canada</image:caption>
+    </image:image>
+
     <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
   </url>
 
   <!-- Arabic Homepage -->
   <url>
     <loc>https://sanaaalyemen.site/ar</loc>
-
+    <lastmod>2025-11-21</lastmod>
+    
     <!-- hreflang alternates -->
     <xhtml:link
       rel="alternate"
@@ -49,7 +59,14 @@
       href="https://sanaaalyemen.site/"
     />
 
+    <!-- Image for SEO -->
+    <image:image>
+      <image:loc>https://sanaaalyemen.site/logo.png</image:loc>
+      <image:title>شعار مطعم صنعاء اليمن</image:title>
+      <image:caption>مطعم يمني أصيل في ميسيساجا، كندا</image:caption>
+    </image:image>
+
     <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
   </url>
 </urlset>

@@ -1,16 +1,15 @@
-// resources/js/pages/UnderConstructionMinimal.tsx
-
 import { Head, Link } from '@inertiajs/react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Construction, Clock, Sparkles, Phone, Mail } from 'lucide-react';
+import { Construction, Clock, Sparkles, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function UnderConstructionMinimal() {
   return (
     <>
       <Head>
-        {/* Optional: this title will update after hydration, but fallback comes from Blade */}
-        <title>Sanaa Alyemen Restaurant — Coming Soon</title>
+        <title>Sanaa Alyemen Restaurant | Authentic Yemeni Food in Mississauga, Canada</title>
+        <meta name="description" content="Sanaa Alyemen Restaurant in Mississauga - Experience authentic Yemeni cuisine prepared with traditional methods and finest local ingredients. Located at 2121 Dundas St E, Mississauga ON L4X 1M3. Call 905-624-7220 for delivery & reservations." />
+        <meta name="keywords" content="Yemeni restaurant Mississauga, authentic Yemeni food Canada, Middle Eastern restaurant Mississauga, Yemeni cuisine Toronto, halal restaurant Mississauga, traditional Yemeni dishes, Sana'a Al Yemen, best Yemeni restaurant Ontario" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 flex items-center justify-center p-4 relative">
@@ -35,7 +34,7 @@ export default function UnderConstructionMinimal() {
             <div className="relative inline-block">
               <img
                 src="/logo.png"
-                alt="Sanaa Alyemen logo"
+                alt="Sanaa Alyemen Restaurant - Authentic Yemeni Cuisine in Mississauga"
                 className="h-32 w-auto mx-auto drop-shadow-xl"
                 fetchPriority="high"
                 loading="eager"
@@ -59,9 +58,11 @@ export default function UnderConstructionMinimal() {
                 </span>
               </h1>
               <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-lg mx-auto">
-                Sanaa Alyemen is an authentic Yemeni restaurant in Toronto, Canada.
-                Our restaurant is being prepared with love and attention to detail.
-                We’ll be serving you soon!
+                <strong>Sanaa Alyemen</strong> brings authentic Yemeni cuisine to Mississauga, Ontario. 
+                Experience traditional Yemeni dishes prepared with the finest local ingredients and aromatic 
+                spices that capture the true essence of Yemen. Our restaurant is being prepared with love and 
+                attention to detail. Enjoy a dining experience that reflects the generosity and rich flavors 
+                of authentic Yemeni culture.
               </p>
             </div>
 
@@ -78,18 +79,33 @@ export default function UnderConstructionMinimal() {
               </div>
             </div>
 
-            {/* Contact Information */}
+            {/* Location & Contact Information */}
             <div className="pt-8 border-t border-slate-200">
               <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-slate-800">Get in Touch</h3>
+                <h2 className="text-lg font-semibold text-slate-800">Visit Us Soon</h2>
+                <div className="flex items-center justify-center gap-2 text-slate-600 mb-4">
+                  <MapPin className="w-5 h-5 text-[#ed7f11]" />
+                  <address className="not-italic">
+                    <a
+                      href="https://maps.google.com/?q=2121+Dundas+St+E,+Mississauga+ON+L4X+1M3"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#ed7f11] hover:text-[#d16d0a] font-medium transition-colors"
+                    >
+                      2121 Dundas St E, Mississauga ON L4X 1M3, Canada
+                    </a>
+                  </address>
+                </div>
+                
+                <h3 className="text-lg font-semibold text-slate-800 pt-4">Get in Touch</h3>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-600">
                   <div className="flex items-center gap-2">
                     <Phone className="w-4 h-4 text-[#ed7f11]" />
                     <a
-                      href="tel:+14378767773"
+                      href="tel:+19056247220"
                       className="text-[#ed7f11] hover:text-[#d16d0a] font-medium transition-colors"
                     >
-                      +1 (437) 876-7773
+                      905-624-7220
                     </a>
                   </div>
                   <div className="hidden sm:block w-px h-4 bg-slate-300" />
@@ -104,7 +120,7 @@ export default function UnderConstructionMinimal() {
                   </div>
                 </div>
                 <p className="text-sm text-slate-500 mt-4">
-                  We’d love to hear from you! Feel free to reach out with any questions.
+                  Contact us for delivery and reservations. We look forward to serving you authentic Yemeni flavors!
                 </p>
               </div>
             </div>

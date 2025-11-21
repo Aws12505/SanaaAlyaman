@@ -1,8 +1,14 @@
 User-agent: *
 Allow: /
+Allow: /ar
 
 # No crawling of backend/admin
 Disallow: /admin/
+Disallow: /api/
+Disallow: /storage/
+
+# Crawl delay (optional, helps with server load)
+Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://sanaaalyemen.site/sitemap.xml

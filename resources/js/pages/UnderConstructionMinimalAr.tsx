@@ -1,21 +1,22 @@
-// resources/js/pages/UnderConstructionMinimalAr.tsx
-
 import { Head, Link } from '@inertiajs/react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Construction, Clock, Sparkles, Phone, Mail } from 'lucide-react';
+import { Construction, Clock, Sparkles, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function UnderConstructionMinimalAr() {
   return (
     <>
       <Head>
-        <title>مطعم صنعاء اليمن — قريباً</title>
+        <title>مطعم صنعاء اليمن | مطبخ يمني أصيل في ميسيساجا، كندا</title>
+        <meta name="description" content="مطعم صنعاء اليمن في ميسيساجا - استمتع بالمطبخ اليمني الأصيل المُعد بالطرق التقليدية وأجود المكونات المحلية. نحن في 2121 Dundas St E، ميسيساجا ON L4X 1M3. اتصل على 905-624-7220 للتوصيل والحجوزات." />
+        <meta name="keywords" content="مطعم يمني ميسيساجا, مطبخ يمني أصيل كندا, مطعم شرق أوسطي ميسيساجا, مأكولات يمنية تورنتو, مطعم حلال ميسيساجا, أطباق يمنية تقليدية, صنعاء اليمن, أفضل مطعم يمني أونتاريو" />
       </Head>
 
       {/* RTL layout for Arabic */}
       <div
         className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 flex items-center justify-center p-4 relative"
         dir="rtl"
+        lang="ar"
       >
         {/* Language switcher (RTL order) */}
         <div className="absolute top-4 left-4 flex items-center gap-2 text-sm font-medium">
@@ -38,7 +39,7 @@ export default function UnderConstructionMinimalAr() {
             <div className="relative inline-block">
               <img
                 src="/logo.png"
-                alt="شعار مطعم صنعاء اليمن"
+                alt="مطعم صنعاء اليمن - مطبخ يمني أصيل في ميسيساجا"
                 className="h-32 w-auto mx-auto drop-shadow-xl"
                 fetchPriority="high"
                 loading="eager"
@@ -49,7 +50,7 @@ export default function UnderConstructionMinimalAr() {
 
             {/* Status */}
             <Badge className="bg-gradient-to-r from-[#ed7f11] to-[#d16d0a] text-white px-6 py-3 text-base font-semibold rounded-full inline-flex items-center justify-center">
-              <Construction className="w-5 h-5 mr-2" />
+              <Construction className="w-5 h-5 ml-2" />
               الموقع قيد الإنشاء
             </Badge>
 
@@ -58,12 +59,14 @@ export default function UnderConstructionMinimalAr() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-800 leading-tight">
                 مطعم صنعاء اليمن
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#ed7f11] to-[#d16d0a] mt-1">
-                  تجربة يمنية لذيذة قريباً
+                  تجربة يمنية أصيلة قريباً
                 </span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed max-w-lg mx-auto">
-                يتم تجهيز مطعم صنعاء اليمن في كندا بكل حب وعناية لتقديم
-                أشهى الأطباق اليمنية الأصيلة. نلتقي بكم قريباً إن شاء الله.
+                <strong>مطعم صنعاء اليمن</strong> يقدم المطبخ اليمني الأصيل في ميسيساجا، أونتاريو. 
+                استمتع بالأطباق اليمنية التقليدية المُعدة بأجود المكونات المحلية والتوابل العطرية 
+                التي تجسد الجوهر الحقيقي لليمن. يتم تجهيز مطعمنا بكل حب وعناية فائقة لتقديم 
+                تجربة طعام تعكس الكرم والنكهات الغنية للثقافة اليمنية الأصيلة.
               </p>
             </div>
 
@@ -80,18 +83,34 @@ export default function UnderConstructionMinimalAr() {
               </div>
             </div>
 
-            {/* Contact information */}
+            {/* Location & Contact information */}
             <div className="pt-8 border-t border-slate-200">
               <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-slate-800">تواصل معنا</h3>
+                <h2 className="text-lg font-semibold text-slate-800">قريباً في خدمتكم</h2>
+                <div className="flex items-center justify-center gap-2 text-slate-600 mb-4">
+                  <MapPin className="w-5 h-5 text-[#ed7f11]" />
+                  <address className="not-italic">
+                    <a
+                      href="https://maps.google.com/?q=2121+Dundas+St+E,+Mississauga+ON+L4X+1M3"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#ed7f11] hover:text-[#d16d0a] font-medium transition-colors"
+                    >
+                      2121 Dundas St E، ميسيساجا ON L4X 1M3، كندا
+                    </a>
+                  </address>
+                </div>
+                
+                <h3 className="text-lg font-semibold text-slate-800 pt-4">تواصل معنا</h3>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-600">
                   <div className="flex items-center gap-2">
                     <Phone className="w-4 h-4 text-[#ed7f11]" />
                     <a
-                      href="tel:+14378767773"
+                      href="tel:+19056247220"
                       className="text-[#ed7f11] hover:text-[#d16d0a] font-medium transition-colors"
+                      dir="ltr"
                     >
-                      ‎+1 (437) 876-7773
+                      905-624-7220
                     </a>
                   </div>
                   <div className="hidden sm:block w-px h-4 bg-slate-300" />
@@ -100,13 +119,14 @@ export default function UnderConstructionMinimalAr() {
                     <a
                       href="mailto:info@sanaaalyemen.site"
                       className="text-[#ed7f11] hover:text-[#d16d0a] font-medium transition-colors"
+                      dir="ltr"
                     >
                       info@sanaaalyemen.site
                     </a>
                   </div>
                 </div>
                 <p className="text-sm text-slate-500 mt-4">
-                  يسعدنا تواصلكم معنا لأي استفسار أو تعاون.
+                  اتصل بنا للتوصيل والحجوزات. نتطلع لخدمتكم بأشهى النكهات اليمنية الأصيلة!
                 </p>
               </div>
             </div>
